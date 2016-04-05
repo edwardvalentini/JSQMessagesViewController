@@ -22,5 +22,10 @@ Pod::Spec.new do |s|
 	s.frameworks = 'QuartzCore', 'CoreGraphics', 'CoreLocation', 'MapKit', 'UIKit', 'Foundation'
 	s.requires_arc = true
 
+  	s.xcconfig = {
+                 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                 'DEFINES_MODULE ' => 'YES',
+               }
+
 	s.dependency 'JSQSystemSoundPlayer', '~> 2.0.1'
 end
